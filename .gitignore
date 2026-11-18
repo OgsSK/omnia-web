@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code (peut contenir des tokens API)
+.claude/settings.local.json
+.claude/*.local.json
+.claude/

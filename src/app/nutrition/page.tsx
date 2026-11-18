@@ -1044,7 +1044,7 @@ export default function NutritionPage() {
               {macroData.length > 0 ? (
                 <div className="w-full h-20 md:h-24">
                   <ResponsiveContainer width="100%" height="100%">
-                    <PieChart><Pie data={macroData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={15} outerRadius={30} paddingAngle={2}>{macroData.map((entry, index) => (<Cell key={`cell-${index}`} fill={entry.color} />))}</Pie><Tooltip contentStyle={{ backgroundColor: '#111111', borderColor: '#222222', borderRadius: '8px', color: '#FFF', fontSize: '10px' }} formatter={(value: number) => `${Math.round(value)} kcal`} /></PieChart>
+                    <PieChart><Pie data={macroData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={15} outerRadius={30} paddingAngle={2}>{macroData.map((entry, index) => (<Cell key={`cell-${index}`} fill={entry.color} />))}</Pie><Tooltip contentStyle={{ backgroundColor: '#111111', borderColor: '#222222', borderRadius: '8px', color: '#FFF', fontSize: '10px' }} formatter={(value: any) => `${Math.round(value)} kcal`} /></PieChart>
                   </ResponsiveContainer>
                 </div>
               ) : <p className="text-[10px] md:text-xs text-text-muted">Aucun macro</p>}
